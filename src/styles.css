@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #202020;
+  color: #dfdfdf;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #0169d8f0;
+  color: #ffffffd6;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background-color: #0151a6;
+}
+
+.quote {
+  font-size: 1.3em;
+  font-style: italic;
+  min-height: 2.3em;
+  margin-block-end: 0.5em;
+}
+
+#author {
+  margin-block-start: 0.4em;
+  font-weight: bold;
+}
+
+.favorites-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.favorite-card {
+  background-color: #019fd8f0;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  width: 250px;
+  position: relative;
+  padding: bottom 30px;
+}
+
+.delete-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: transform 0.2s ease;
+}
+
+.delete-btn:hover {
+  transform: scale(1.3);
+}
+
+.favorite-card-author {
+  font-style: italic;
+}
+
+.button-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.fa-regular {
+  width: 34px;
+  height: 34px;
+  background-size: cover;
+  cursor: pointer;
+  font-size: 35px;
+  color: #e4dc00;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  margin-left: 20px;
+  transform: translateY(-50%);
+}
+
+.fa-solid {
+  width: 34px;
+  height: 34px;
+  background-size: cover;
+  cursor: pointer;
+  font-size: 35px;
+  color: #e4dc00;
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  margin-left: 20px;
+  transform: translateY(-50%);
+}
+
+.fa-regular:hover {
+  /* font-weight: 900; */
+  /* color: #e4dc001b; */
+  transform: translateY(-50%) scale(1.2);
+}
+
+.fa-solid:hover {
+  transform: translateY(-50%) scale(1.2);
+}
