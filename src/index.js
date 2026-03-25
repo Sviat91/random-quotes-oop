@@ -1,5 +1,27 @@
-import Quote from './Quote.js';
+import RandomQuote from './RandomQuote.js';
 
-const firstQuote = new Quote('123', 'Some text', 'Sviat');
+class RandomQuotesApp {
+  constructor() {
+    this.randomQuoteBtn = document.getElementById('generate-btn');
+    this.quoteTextElement = document.getElementById('quote-text');
+    this.authorElement = document.getElementById('author');
+    this.currentQuote = null;
+    this.init();
+  }
+  displayQuote() {
+    const { text, author } = this.currentQuote;
+    this.quoteTextElement.textContent = `"${text}"`;
+    this.authorElement.textContent = author;
+  }
+  getRandomQuote() {
+    const randomQuote = RandomQuote.getRandomQuote();
+    this.currentQuote = randomQuote;
+    this.displayQuote(randomQuote);
+  }
 
-console.log(firstQuote);
+  init() {
+    this.randomQuoteBtn.addEventListener('click', () => this.getRandomQuote());
+  }
+}
+
+new RandomQuotesApp();
