@@ -9,9 +9,8 @@ class RandomQuotesApp {
     this.init();
   }
   displayQuote() {
-    const { text, author } = this.currentQuote;
-    this.quoteTextElement.textContent = `"${text}"`;
-    this.authorElement.textContent = author;
+    this.quoteTextElement.textContent = this.currentQuote.formatText();
+    this.authorElement.textContent = this.currentQuote.formatAuthor();
   }
   getRandomQuote() {
     const randomQuote = RandomQuote.getRandomQuote();
