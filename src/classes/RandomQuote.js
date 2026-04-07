@@ -10,7 +10,8 @@ class RandomQuote {
   }
   static getRandomQuoteAPI() {
     const url = 'https://quoteslate.vercel.app/api/quotes/random';
-    return fetch(url)
+    const options = { headers: { 'Content-Type': 'application/json' } };
+    return fetch(url, options)
       .then((response) => response.json())
       .then(({ id, quote, author }) => new Quote(id, quote, author))
       .catch((error) => console.error(error));
