@@ -14,18 +14,21 @@ class RandomQuotesApp {
     this.quoteTextElement.textContent = this.currentQuote.formatText();
     this.authorElement.textContent = this.currentQuote.formatAuthor();
   }
-  getRandomQuote() {
-    const randomQuote = RandomQuote.getRandomQuote();
-    this.currentQuote = randomQuote;
-    this.displayQuote();
+  changeCurrentQuote(newQuote) {
+    if (newQuote instanceof Quote) {
+      this.currentQuote = newQuote;
+      this.displayQuote();
+    }
   }
+
+  getRandomQuote() {
+    this.changeCurrentQuote(RandomQuote.getRandomQuote());
+  }
+
   getRandomQuoteViaApi() {
-    RandomQuote.getRandomQuoteAPI().then((quote) => {
-      if (quote instanceof Quote) {
-        this.currentQuote = quote;
-        this.displayQuote();
-      }
-    });
+    RandomQuote.getRandomQuoteAPI().then((quote) =>
+      this.changeCurrentQuote(quote),
+    );
   }
 
   init() {
