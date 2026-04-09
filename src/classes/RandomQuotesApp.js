@@ -25,10 +25,15 @@ class RandomQuotesApp {
     this.changeCurrentQuote(RandomQuote.getRandomQuote());
   }
 
-  getRandomQuoteViaApi() {
-    RandomQuote.getRandomQuoteAPI().then((quote) =>
-      this.changeCurrentQuote(quote),
-    );
+  // getRandomQuoteViaApi() {
+  //   RandomQuote.getRandomQuoteAPI().then((quote) =>
+  //     this.changeCurrentQuote(quote),
+  //   );
+  // }
+
+  async getRandomQuoteViaApi() {
+    const quote = await RandomQuote.getRandomQuoteAPI();
+    this.changeCurrentQuote(quote);
   }
 
   init() {

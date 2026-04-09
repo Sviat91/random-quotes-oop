@@ -8,13 +8,25 @@ class RandomQuote {
     const { id, text, author } = quotes[randomIndex];
     return new Quote(id, text, author);
   }
-  static getRandomQuoteAPI() {
+  // static getRandomQuoteAPI() {
+  //   const url = 'https://quoteslate.vercel.app/api/quotes/random';
+  //   const options = { headers: { 'Content-Type': 'application/json' } };
+  //   return fetch(url, options)
+  //     .then((response) => response.json())
+  //     .then(({ id, quote, author }) => new Quote(id, quote, author))
+  //     .catch((error) => console.error(error));
+  // }
+
+  static async getRandomQuoteAPI() {
     const url = 'https://quoteslate.vercel.app/api/quotes/random';
     const options = { headers: { 'Content-Type': 'application/json' } };
-    return fetch(url, options)
-      .then((response) => response.json())
-      .then(({ id, quote, author }) => new Quote(id, quote, author))
-      .catch((error) => console.error(error));
+    try {
+      const response = await fetch(url, options);
+      const { id, quote, author } = await response.json();
+      return new Quote(id, quote, author);
+    } catch (error) {
+      console.error(error);
+    }
   }
 }
 
