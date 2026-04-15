@@ -11,7 +11,7 @@ body {
 }
 
 .btn {
-  padding: 12px 20px;
+  padding: 12px 15px;
   margin: 0px 10px;
   font-size: 16px;
   background-color: #0169d8f0;
@@ -19,6 +19,9 @@ body {
   border: none;
   cursor: pointer;
   border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .btn:hover {
@@ -26,13 +29,16 @@ body {
 }
 
 .btn-api {
-  padding: 12px 20px;
+  padding: 12px 15px;
   font-size: 16px;
   background-color: #01d85ef0;
   color: #ffffffd6;
   border: none;
   cursor: pointer;
   border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .btn-api:hover {
@@ -89,42 +95,4 @@ body {
 .button-wrapper {
   position: relative;
   display: inline-block;
-}
-
-.fa-regular {
-  width: 34px;
-  height: 34px;
-  background-size: cover;
-  cursor: pointer;
-  font-size: 35px;
-  color: #e4dc00;
-  position: absolute;
-  left: 100%;
-  top: 50%;
-  margin-left: 20px;
-  transform: translateY(-50%);
-}
-
-.fa-solid {
-  width: 34px;
-  height: 34px;
-  background-size: cover;
-  cursor: pointer;
-  font-size: 35px;
-  color: #e4dc00;
-  position: absolute;
-  left: 100%;
-  top: 50%;
-  margin-left: 20px;
-  transform: translateY(-50%);
-}
-
-.fa-regular:hover {
-  /* font-weight: 900; */
-  /* color: #e4dc001b; */
-  transform: translateY(-50%) scale(1.2);
-}
-
-.fa-solid:hover {
-  transform: translateY(-50%) scale(1.2);
 }
