@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Quotes</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Random Quotes</h1>
+      <div id="quote">
+        <p id="quote-text" class="quote">
+          Click the button to get a random quote
+        </p>
+        <p id="author"></p>
+        <div class="button-wrapper">
+          <button id="generate-btn" class="btn">
+            Get local Quote <i class="fa-solid fa-shuffle"></i>
+          </button>
+          <button id="generate-btn-api" class="btn-api">
+            Get online Quote
+            <i class="fa-solid fa-globe"></i>
+          </button>
+        </div>
+      </div>
+      <!-- <button id="favorite-btn" class="btn">Add to Favorites</button> -->
+    </div>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
