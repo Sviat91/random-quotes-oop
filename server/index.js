@@ -9,8 +9,9 @@ function getRandomQuote() {
   return quote;
 }
 
-app.get('/', (req, res) => {
-  res.send('Hello World');
+app.get('/quotes/unique', (req, res) => {
+  const randomQuote = getRandomQuote();
+  res.json(randomQuote);
 });
 
 app.listen(PORT, () => {
