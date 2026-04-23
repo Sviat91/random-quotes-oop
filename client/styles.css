@@ -12,7 +12,7 @@ body {
 
 .btn {
   padding: 12px 15px;
-  margin: 0px 10px;
+  margin: 5px 5px;
   font-size: 16px;
   background-color: #0169d8f0;
   color: #ffffffd6;
@@ -30,6 +30,7 @@ body {
 
 .btn-api {
   padding: 12px 15px;
+  margin: 5px 10px;
   font-size: 16px;
   background-color: #01d85ef0;
   color: #ffffffd6;
@@ -43,6 +44,24 @@ body {
 
 .btn-api:hover {
   background-color: #02a604;
+}
+
+.btn-own-api {
+  padding: 12px 15px;
+  font-size: 16px;
+  color: #202020;
+  background-color: #e38a03f0;
+  color: #040303d6;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn-own-api:hover {
+  background-color: #d37f00f0;
 }
 
 .quote {
