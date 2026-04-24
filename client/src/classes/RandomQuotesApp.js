@@ -26,28 +26,28 @@ class RandomQuotesApp {
     this.changeCurrentQuote(RandomQuote.getRandomQuote());
   }
 
-  async getOwnApi() {
-    const ownApiQuote = await RandomQuote.getQuoteOwnApi();
-    this.changeCurrentQuote(ownApiQuote);
-  }
-
   // getRandomQuoteViaApi() {
   //   RandomQuote.getRandomQuoteAPI().then((quote) =>
   //     this.changeCurrentQuote(quote),
   //   );
   // }
 
-  async getRandomQuoteViaApi() {
-    const quote = await RandomQuote.getRandomQuoteAPI();
-    this.changeCurrentQuote(quote);
+  async handkeRandomQuoteViaAPI(apiIsOwn = false) {
+    this.changeCurrentQuote(
+      apiIsOwn
+        ? await RandomQuote.getQuoteOwnApi()
+        : await RandomQuote.getRandomQuoteAPI(),
+    );
   }
 
   init() {
     this.randomQuoteBtn.addEventListener('click', () => this.getRandomQuote());
     this.randomQuoteApiBtn.addEventListener('click', () =>
-      this.getRandomQuoteViaApi(),
+      this.handkeRandomQuoteViaAPI(),
     );
-    this.randomQuoteOwnApi.addEventListener('click', () => this.getOwnApi());
+    this.randomQuoteOwnApi.addEventListener('click', () =>
+      this.handkeRandomQuoteViaAPI(true),
+    );
   }
 }
 
