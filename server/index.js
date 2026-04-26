@@ -2,7 +2,7 @@ const express = require('express'); // Common JS module
 const cors = require('cors');
 const quotes = require('./data/quotes');
 const app = express();
-const PORT = 3000;
+const PORT = 3001;
 
 function getRandomQuote() {
   const randomIndex = Math.floor(Math.random() * quotes.length);

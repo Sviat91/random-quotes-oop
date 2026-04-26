@@ -10,7 +10,7 @@ class RandomQuote {
   }
 
   static async getQuoteOwnApi() {
-    const url = 'http://localhost:3000/quotes/unique';
+    const url = 'http://localhost:3001/quotes/unique';
     const options = { headers: { 'Content-Type': 'application/json' } };
     try {
       const res = await fetch(url, options);
